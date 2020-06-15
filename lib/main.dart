@@ -5,6 +5,7 @@ import 'package:flutter/material.dart';
 
 import 'details.dart';
 import 'eventModel.dart';
+import 'serveces/dayApi.dart';
 
 void main() {
   runApp(MyApp());
@@ -81,8 +82,11 @@ class _MyHomePageState extends State<MyHomePage> {
     super.initState();
   }
 
+  DaysApi daysApi = DaysApi();
+
   @override
   Widget build(BuildContext context) {
+    daysApi.geyDays();
     return Scaffold(
       appBar: AppBar(
         elevation: 0,
